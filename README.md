@@ -1,6 +1,4 @@
-# BiblioHEP
-
-A collection of useful BibTeX references for HEP.
+# BiblioHEP - a collection of useful BibTeX references for HEP
 
 ## How to use this package
 
