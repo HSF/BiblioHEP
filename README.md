@@ -13,23 +13,23 @@ Here is a little example:
 
 ```
 % Run with, e.g.,
-%    pdflatex test_BiblioHEP
-%    biber test_BiblioHEP 
-%    pdflatex test_BiblioHEP
-%    pdflatex test_BiblioHEP
+%    pdflatex my_test_document
+%    biber my_test_document
+%    pdflatex my_test_document
+%    pdflatex my_test_document
 
 \documentclass{article}
 
 \usepackage{hyperref}
 \usepackage[style=numeric,sorting=none]{biblatex}
 
-\addbibresource{BiblioHEP/events_non_hep.bib}
-\addbibresource{BiblioHEP/sites.bib}
+\addbibresource{BiblioHEP/events_hep.bib}
+\addbibresource{BiblioHEP/software.bib}
 % ...
 
 \begin{document}
 
-\title{My Little Document}
+\title{My Test Document}
 \maketitle
 
 \section{Introduction}
@@ -46,10 +46,15 @@ This is a set of useful \texttt{.bib} files prepared by the HSF~\cite{HSF}.
 
 ## Contributing
 
-We very much welcome contributions, but please check that the references being added don't already exist in one of the files. If you feel it would be useful to create new `.bib` files, kindly create an issue to discuss the idea.
+We very much welcome contributions, but please check that the references being added don't already exist in one of the `.bib` files.
+If you feel it would be useful to create new `.bib` files, kindly create an issue to discuss the idea.
+Otherwise, update the file relevant for events, publications, software or sites, following the simple comments at the top of each file,
+which are there to help with organisation
+
+It is a good idea to run locally a little example `.tex` document similar to the one given below with your additions, to ensure
+there are no warnings and the citations render correctly.
 
 For adding information to this page or improving it,
 we follow the [pull request](https://help.github.com/articles/using-pull-requests/) workflow in GitHub:
 simply fork the repository, edit the files you want to edit, push them to your fork, and open a pull request.
-
 (No need to create a fork if you are part of the HSF team with special rights on the repository, of course.)
